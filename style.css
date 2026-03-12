@@ -1,4 +1,4 @@
-﻿* {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -90,15 +90,54 @@ section h2 {
 }
 
 .project-card {
-    background: #1e293b;
-    padding: 25px;
-    border-radius: 12px;
-    transition: transform 0.3s;
+    perspective: 1000px;
+    height: 160px;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-    .project-card:hover {
-        transform: translateY(-8px);
-    }
+.card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease;
+    border-radius: 12px;
+}
+
+.project-card.flipped .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    text-align: center;
+}
+
+.card-front {
+    background: #1e293b;
+}
+
+.card-back {
+    background: #0f172a;
+    border: 1px solid #38bdf8;
+    transform: rotateY(180deg);
+    color: #94a3b8;
+    font-size: 14px;
+    line-height: 1.6;
+}
 
 footer {
     text-align: center;
@@ -159,6 +198,22 @@ footer {
     font-size: 14px;
 }
 
+.timeline-item ul {
+    margin-top: 12px;
+    padding-left: 18px;
+    color: #94a3b8;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.timeline-item ul li {
+    margin-bottom: 6px;
+}
+
+.timeline-item ul li::marker {
+    color: #38bdf8;
+}
+
 .badge-container {
     display: flex;
     flex-wrap: wrap;
@@ -197,4 +252,38 @@ footer {
 
 #contact a:hover {
     text-decoration: underline;
+}
+
+#resume {
+    text-align: center;
+}
+
+.resume-subtitle {
+    color: #94a3b8;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.resume-btn-wrapper {
+    margin-top: 30px;
+}
+
+.resume-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 15px;
+    padding: 14px 32px;
+    border-radius: 8px;
+    background: #38bdf8;
+    color: #020617;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.resume-btn:hover {
+    background: #0ea5e9;
+    transform: translateY(-3px);
+    box-shadow: 0 0 16px #38bdf8;
 }
