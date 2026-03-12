@@ -35,6 +35,18 @@ function type() {
 window.onload = function () {
     type();
     animateStats();
+
+    const projectCards = document.querySelectorAll(".project-card");
+
+    projectCards.forEach(card => {
+        card.addEventListener("click", function () {
+            const isAlreadyFlipped = this.classList.contains("flipped");
+            projectCards.forEach(c => c.classList.remove("flipped"));
+            if (!isAlreadyFlipped) {
+                this.classList.add("flipped");
+            }
+        });
+    });
 };
 
 // Scroll progress indicator
