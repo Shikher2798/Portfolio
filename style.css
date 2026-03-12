@@ -187,6 +187,20 @@ footer {
     opacity: 0;
     transform: translateY(40px);
     transition: all 0.6s ease;
+    position: relative;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -39px;
+    top: 6px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #38bdf8;
+    border: 2px solid #020617;
+    box-shadow: 0 0 8px #38bdf8;
 }
 
 .timeline-item h3 {
