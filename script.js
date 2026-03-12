@@ -47,6 +47,20 @@ window.onload = function () {
             }
         });
     });
+
+    // Phone number copy to clipboard
+const phoneLink = document.getElementById("phone-link");
+if (phoneLink) {
+    phoneLink.addEventListener("click", function () {
+        navigator.clipboard.writeText("+919876543210").then(function () {
+            const toast = document.getElementById("copy-toast");
+            toast.classList.add("show");
+            setTimeout(function () {
+                toast.classList.remove("show");
+            }, 2000);
+        });
+    });
+}
 };
 
 // Scroll progress indicator
@@ -122,3 +136,4 @@ function animateStats() {
     });
 
 }
+
