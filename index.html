@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -85,6 +86,21 @@
     </section>
 
 
+    <section id="resume">
+
+        <h2>Resume</h2>
+
+        <p class="resume-subtitle">View or download my resume to learn more about my experience and skills.</p>
+
+        <div class="resume-btn-wrapper">
+            <a href="Resume.pdf" target="_blank" class="btn resume-btn">
+                <i class="fa-solid fa-file-pdf"></i>&nbsp; View Resume
+            </a>
+        </div>
+
+    </section>
+
+
     <section id="projects">
 
         <h2>Projects</h2>
@@ -92,27 +108,45 @@
         <div class="projects-grid">
 
             <div class="project-card">
-                <h3>Code Review Tool</h3>
-                <p>
-                    Internal engineering tool that automates code quality checks
-                    and improves development workflow efficiency.
-                </p>
+                <div class="card-inner">
+                    <div class="card-front">
+                        <h3>Code Review Tool</h3>
+                    </div>
+                    <div class="card-back">
+                        <p>
+                            Internal engineering tool that automates code quality checks
+                            and improves development workflow efficiency.
+                        </p>
+                    </div>
+                </div>
             </div>
 
             <div class="project-card">
-                <h3>JSON Validation Engine</h3>
-                <p>
-                    Built a configurable validation system using SQL stored procedures
-                    that validates JSON data for mandatory fields and allowed values.
-                </p>
+                <div class="card-inner">
+                    <div class="card-front">
+                        <h3>JSON Validation Engine</h3>
+                    </div>
+                    <div class="card-back">
+                        <p>
+                            Built a configurable validation system using SQL stored procedures
+                            that validates JSON data for mandatory fields and allowed values.
+                        </p>
+                    </div>
+                </div>
             </div>
 
             <div class="project-card">
-                <h3>Windows Data Sync Service</h3>
-                <p>
-                    Windows service responsible for synchronizing data between
-                    multiple servers with retry mechanisms and fault handling.
-                </p>
+                <div class="card-inner">
+                    <div class="card-front">
+                        <h3>Windows Data Sync Service</h3>
+                    </div>
+                    <div class="card-back">
+                        <p>
+                            Windows service responsible for synchronizing data between
+                            multiple servers with retry mechanisms and fault handling.
+                        </p>
+                    </div>
+                </div>
             </div>
 
         </div>
@@ -131,11 +165,12 @@
                 <h3>Software Engineer II</h3>
                 <span>May 2025 - Present</span>
 
-                <p>
-                    Working on enterprise insurance platform using .NET, SQL Server,
-                    JavaScript and Kendo UI.
-                    Developed internal engineering tools and backend services.
-                </p>
+                <ul>
+                    <li>Working on an enterprise insurance platform using .NET, SQL Server, JavaScript and Kendo UI.</li>
+                    <li>Developed internal engineering tools to automate code quality checks and improve developer workflow.</li>
+                    <li>Built and maintained backend Windows services with retry mechanisms and fault handling.</li>
+                    <li>Collaborated with cross-functional teams to design and deliver scalable backend solutions.</li>
+                </ul>
 
             </div>
 
@@ -144,10 +179,12 @@
                 <h3>Junior Developer</h3>
                 <span>Aug 2022 - Apr 2025</span>
 
-                <p>
-                    Worked on ASP.NET MVC applications, SQL stored procedures
-                    and frontend components using JavaScript and Kendo UI.
-                </p>
+                <ul>
+                    <li>Worked on ASP.NET MVC applications for enterprise insurance workflows.</li>
+                    <li>Wrote and optimised complex SQL stored procedures for data validation and reporting.</li>
+                    <li>Built frontend components and interactive grids using JavaScript and Kendo UI.</li>
+                    <li>Developed a JSON validation engine using configurable SQL-based rules for field and value checks.</li>
+                </ul>
 
             </div>
 
@@ -176,5 +213,4 @@
 </body>
 
 </html>
-
 
