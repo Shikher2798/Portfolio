@@ -301,3 +301,32 @@ footer {
     transform: translateY(-3px);
     box-shadow: 0 0 16px #38bdf8;
 }
+#contact a:hover {
+    text-decoration: underline;
+}
+
+#phone-link {
+    cursor: pointer;
+}
+
+#copy-toast {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    background: #1e293b;
+    color: #38bdf8;
+    border: 1px solid #38bdf8;
+    padding: 10px 24px;
+    border-radius: 8px;
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+#copy-toast.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
